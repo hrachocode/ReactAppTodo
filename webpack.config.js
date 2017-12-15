@@ -4,7 +4,7 @@ var path = require('path');
 module.exports = {
 	entry: [
 		'node_modules/jquery/dist/jquery.min.js',
-		'node_modules/foundation-sites/dist/foundation.min.js',
+		'node_modules/foundation-sites/dist/js/foundation.min.js',
 		'./app/jsx/index.jsx'
 		],
 	externals: {
@@ -12,8 +12,8 @@ module.exports = {
 	},
 	plugins: [
 		new webpack.ProvidePlugin({
-			'$': 'jquery',
-			'jQuery': 'jquery'
+			'$': 'jQuery',
+			'jQuery': 'jQuery'
 		})
 	],
 	output: {
@@ -22,6 +22,10 @@ module.exports = {
 	},
 	resolve: {
 		root: __dirname,
+		modulesDirectories: [
+			'node_modules',
+			'./app/Components'
+		],
 		alias: {
 			// CSS
 			AppStyle: 'app/styles/app.scss'

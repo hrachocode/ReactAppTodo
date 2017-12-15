@@ -1,4 +1,5 @@
-var React = require('react');
+//var React = require('react');
+import React from 'react';
 var expect = require('expect');
 var TestUtils = require('react-addons-test-utils');
 var $ = require('jquery');
